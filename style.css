@@ -1,0 +1,452 @@
+:root {
+    --blu-notte: #0a192f;
+    --blu-notte-chiaro: #112240;
+    --testo-principale: #ccd6f6;
+    --testo-secondario: #8892b0;
+    --accento: #e6b400;
+    --accento-hover: #ffd60a;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 20px;
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .intro {
+        padding: 40px 20px;
+        gap: 16px;
+    }
+
+    .foto-profilo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .chi-sono {
+        padding: 32px 20px;
+    }
+
+    .chi-sono h2 {
+        font-size: 26px;
+    }
+
+    .chi-sono p {
+        font-size: 16px;
+    }
+
+    .competenze {
+        padding: 40px 20px;
+    }
+
+    .competenze h2 {
+        font-size: 26px;
+    }
+
+    .cards {
+        gap: 16px;
+    }
+
+    .card {
+        padding: 24px 16px;
+    }
+
+    .hobby {
+        padding: 40px 20px;
+    }
+
+    .hobby h2 {
+        font-size: 26px;
+    }
+
+    .hobby p {
+        font-size: 16px;
+    }
+
+    .hobby-gallery {
+        gap: 20px;
+    }
+
+    .hobby-gallery img {
+        width: 100%;
+        max-width: 330px;
+        height: auto;
+    }
+
+    .contatti {
+        padding: 40px 20px;
+    }
+
+    .contatti h2 {
+        font-size: 26px;
+    }
+
+    .contatti li {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 24px 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 14px;
+    }
+
+    .social-links img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    background-color: var(--blu-notte);
+    color: var(--testo-principale);
+    font: 'Inter', font-family;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: var(--blu-notte-chiaro);
+    padding: 20px 48px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navbar h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--testo-principale);
+    transition: color 0.3s ease;
+}
+
+.navbar h1:hover {
+    color: var(--accento);
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 24px;
+}
+
+.foto-profilo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 3px solid var(--accento);
+}
+
+.intro p {
+    font-size: 18px;
+    color: var(--testo-secondario);
+    max-width: 500px;
+}
+
+.chi-sono {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 48px 24px;
+
+    text-align: center;
+}
+
+.chi-sono h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: var(--accento);
+    margin-bottom: 20px;
+
+    position: relative;
+    display: inline-block;
+}
+
+.chi-sono h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accento);
+    margin: 12 px auto 0;
+}
+
+.chi-sono p {
+    font-size: 17px;
+    color: var(--testo-secondario);
+}
+
+.competenze {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px;
+
+    text-align: center;
+}
+
+.competenze h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: var(--accento);
+
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.competenze h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accento);
+    margin: 12px auto 0;
+}
+
+.card {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background-color: var(--blu-notte-chiaro);
+    padding: 32px 20px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: var(--accento);
+}
+
+.card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--testo-principale);
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--testo-secondario);
+}
+
+.hobby {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.hobby h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: var(--accento);
+
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.hobby h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 12px auto 0;
+    background-color: var(--accento);
+}
+
+.hobby p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+
+    color: var(--testo-secondario);
+    font-size: 17px;
+}
+
+.hobby-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hobby-gallery img {
+    width: 350 px;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+    border: 2px solid transparent;
+
+    transition: all .3s ease;
+}
+
+.hobby-gallery img:hover {
+    transform: translateY(-8px);
+    border-color: var(--accento);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.contatti {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.contatti h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: var(--accento);
+
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contatti h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accento);
+    margin: 12px auto 0;
+}
+
+.contatti ul {
+    list-style: none;
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contatti li {
+    background-color: var(--blu-notte-chiaro);
+
+    padding: 18px 24px;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    transition: all .3s ease;
+
+    border: 1px solid transparent;
+}
+
+.contatti li:hover {
+    transform: translateY(-5px);
+    border-color: var(--accento);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contatti a {
+    color: var(--testo-principale);
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.contatti a:hover {
+    color: var(--accento);
+}   
+
+
+footer {
+    background-color: var(--blu-notte-chiaro);
+
+    margin-top: 70px;
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+footer p {
+    color: var(--testo-secondario);
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+}
+
+.social-links a {
+    color: var(--testo-principale);
+    text-decoration: none;
+    
+    transition: color .3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accento);
+}
