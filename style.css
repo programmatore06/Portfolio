@@ -58,28 +58,6 @@
         padding: 24px 16px;
     }
 
-    .hobby {
-        padding: 40px 20px;
-    }
-
-    .hobby h2 {
-        font-size: 26px;
-    }
-
-    .hobby p {
-        font-size: 16px;
-    }
-
-    .hobby-gallery {
-        gap: 20px;
-    }
-
-    .hobby-gallery img {
-        width: 100%;
-        max-width: 330px;
-        height: auto;
-    }
-
     .contatti {
         padding: 40px 20px;
     }
@@ -120,7 +98,7 @@
 body  {
     background-color: var(--blu-notte);
     color: var(--testo-principale);
-    font: 'Inter', font-family;
+    font: 'Inter', sans-serif;
     line-height: 1.6;
 }
 
@@ -278,65 +256,6 @@ img {
 .card p {
     font-size: 14px;
     color: var(--testo-secondario);
-}
-
-.hobby {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 64px 24px;
-    text-align: center;
-}
-
-.hobby h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-    color: var(--accento);
-
-    display: inline-block;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.hobby h2::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    margin: 12px auto 0;
-    background-color: var(--accento);
-}
-
-.hobby p {
-    max-width: 700px;
-    margin: 0 auto 40px;
-
-    color: var(--testo-secondario);
-    font-size: 17px;
-}
-
-.hobby-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.hobby-gallery img {
-    width: 350 px;
-    height: 230px;
-
-    object-fit: cover;
-
-    border-radius: 15px;
-    border: 2px solid transparent;
-
-    transition: all .3s ease;
-}
-
-.hobby-gallery img:hover {
-    transform: translateY(-8px);
-    border-color: var(--accento);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .contatti {
